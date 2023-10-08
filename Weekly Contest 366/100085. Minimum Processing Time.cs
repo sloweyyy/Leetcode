@@ -1,51 +1,22 @@
-
-
 public class Solution
 {
-    public int MinProcessingTime(int[] processorTime, int[] tasks)
+    public int MinProcessingTime(IList<int> processorTime, IList<int> tasks)
     {
-        int n = processorTime.Length;
-        int m = tasks.Length;
-
-        Array.Sort(processorTime, (a, b) => b - a); // Sort processors in descending order.
-
-        long left = 0;
-        long right = (long)processorTime[0] * m; // Maximum possible time
-
-        while (left < right)
+        int n = processorTime.Count;
+        List<(int, int)> taskList = new List<(int, int)>();
+        for (int i = 0; i < tasks.Count; i++)
         {
-            long mid = left + (right - left) / 2;
-
-            if (IsFeasible(processorTime, tasks, mid))
-            {
-                right = mid;
-            }
-            else
-            {
-                left = mid + 1;
-            }
+            taskList.Add((i, tasks[i]));
         }
-
-        return (int)left;
-    }
-
-    private bool IsFeasible(int[] processorTime, int[] tasks, long maxTime)
-    {
-        int n = processorTime.Length;
-        int m = tasks.Length;
-        int taskIndex = m - 1;
-
-        for (int i = 0; i < n; i++)
+        taskList.Sort((a, b) => b.Item2.CompareTo(a.Item2));
+        List<int> processorTimeList = new List<int>(processorTime);
+        processorTimeList.Sort((a, b) => b.CompareTo(a)); // sort processorTime in descending order
+        int[] availableTime = new int[n];
+        foreach ((int taskIndex, int taskTime) in taskList)
         {
-            long timeLeft = maxTime / processorTime[i];
-
-            while (taskIndex >= 0 && tasks[taskIndex] <= timeLeft)
-            {
-                timeLeft -= tasks[taskIndex];
-                taskIndex--;
-            }
+            int processorIndex = Array.IndexOf(availableTime, availableTime.Min());
+            availableTime[processorIndex] += taskTime * processorTimeList[processorIndex]; // multiply taskTime with processorTime
         }
-
-        return taskIndex < 0;
+        return availableTime.Max();
     }
 }
