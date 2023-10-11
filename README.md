@@ -16,6 +16,9 @@ The goal of this repository is to provide clear and well-documented solutions to
 - Python
 - Java
 - JavaScript
+- Typescript
+- Dart
+- Go
 
 ## Table of Contents
 
