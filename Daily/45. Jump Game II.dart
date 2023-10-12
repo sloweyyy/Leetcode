@@ -1,3 +1,5 @@
+import 'dart:math';
+
 class Solution {
   int jump(List<int> nums) {
     int jumps = 0;
