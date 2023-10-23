@@ -2,7 +2,7 @@
 class Solution
 /**
  * @brief Checks if string s is a subsequence of string t.
- * 
+ *
  * @param s The subsequence string to check.
  * @param t The target string to check against.
  * @return true If s is a subsequence of t.
