@@ -6,7 +6,6 @@ public:
     vector<int> restoreArray(vector<vector<int>> &adjacentPairs)
     {
         unordered_map<int, vector<int>> graph;
-
         for (auto &edge : adjacentPairs)
         {
             graph[edge[0]].push_back(edge[1]);
@@ -40,7 +39,7 @@ public:
                 }
             }
         }
-
         return ans;
     }
 };
+
