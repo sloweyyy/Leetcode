@@ -57,11 +57,18 @@
   "C_Cpp_Runner.useLinkTimeOptimization": false,
   "C_Cpp_Runner.msvcSecureNoWarnings": false,
   "files.associations": {
-    "*.embeddedhtml": "html",
     "*.py": "python",
+    "*.embeddedhtml": "html",
     "deque": "cpp",
     "string": "cpp",
     "vector": "cpp",
-    "unordered_map": "cpp"
+    "unordered_map": "cpp",
+    "array": "cpp",
+    "any": "cpp",
+    "string_view": "cpp",
+    "ranges": "cpp",
+    "span": "cpp",
+    "stacktrace": "cpp",
+    "regex": "cpp"
   }
 }
