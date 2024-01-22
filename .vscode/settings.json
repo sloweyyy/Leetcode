@@ -69,6 +69,11 @@
     "ranges": "cpp",
     "span": "cpp",
     "stacktrace": "cpp",
-    "regex": "cpp"
+    "regex": "cpp",
+    "forward_list": "cpp",
+    "list": "cpp",
+    "unordered_set": "cpp",
+    "initializer_list": "cpp",
+    "valarray": "cpp"
   }
 }
