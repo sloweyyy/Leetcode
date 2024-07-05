@@ -1,13 +1,11 @@
 # Leetcode Solutions
 
-Author: SloWey
-Email: truonglevinhphuc2006@gmail.com
+**Author:** SloWey  
+**Email:** truonglevinhphuc2006@gmail.com
 
 ## About
 
-This repository contains solutions to various LeetCode problems implemented in multiple programming languages, including C++, C#, Python, Java, and JavaScript. LeetCode is a platform for practicing coding and algorithmic challenges.
-
-The goal of this repository is to provide clear and well-documented solutions to help you improve your problem-solving skills and prepare for coding interviews.
+This repository showcases my journey of learning Data Structures and Algorithms (DAS) through solving various LeetCode problems in multiple programming languages. LeetCode is a platform for practicing coding and algorithmic challenges, and this repository aims to provide clear and well-documented solutions to help others improve their problem-solving skills and prepare for coding interviews.
 
 ## Languages
 
@@ -16,7 +14,7 @@ The goal of this repository is to provide clear and well-documented solutions to
 - Python
 - Java
 - JavaScript
-- Typescript
+- TypeScript
 - Dart
 - Go
 
@@ -36,7 +34,7 @@ The goal of this repository is to provide clear and well-documented solutions to
 
 ### Prerequisites
 
-You'll need to have the respective compilers or interpreters for the programming languages you want to use. Ensure they are properly installed and configured on your system.
+To run the solutions, ensure you have the respective compilers or interpreters installed and configured on your system for the programming languages you want to use.
 
 ## Usage
 
@@ -61,4 +59,4 @@ This repository is licensed under the [MIT License](LICENSE).
 
 ## Contact
 
-If you have any questions, suggestions, or feedback, you can reach out to the repository owner, SloWey, via email at truonglevinhphuc2006@gmail.com.
+If you have any questions, suggestions, or feedback, feel free to reach out to me via email at truonglevinhphuc2006@gmail.com.
