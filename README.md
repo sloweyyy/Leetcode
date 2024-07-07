@@ -1,3 +1,4 @@
+
 # LeetCode Solutions
 
 **Author:** SloWey  
@@ -9,7 +10,16 @@ This repository showcases my journey of learning Data Structures and Algorithms 
 
 ## Languages
 
-$(cat languages.txt)
+- C#: 27.07%
+- C++: 22.32%
+- Java: 23.89%
+- JavaScript: 10.80%
+- TypeScript: 7.58%
+- Python: 6.08%
+- Dart: 0.38%
+- Go: 1.64%
+- PHP: 0.23%
+
 
 ## Table of Contents
 
