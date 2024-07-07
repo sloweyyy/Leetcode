@@ -26,9 +26,10 @@ def generate_language_section(language_stats):
     language_bytes = {}
 
     for language, data in language_stats.items():
-        bytes_count = data.get('size', 0)
-        language_bytes[language] = bytes_count
-        total_bytes += bytes_count
+        if isinstance(data, dict) and 'size' in data:
+            bytes_count = data['size']
+            language_bytes[language] = bytes_count
+            total_bytes += bytes_count
 
     language_section = ""
     for language, bytes_ in language_bytes.items():
