@@ -4,12 +4,21 @@ import subprocess
 
 
 def get_language_stats():
-    result = subprocess.run(
-        ['github-linguist', '--json'], stdout=subprocess.PIPE)
-    return json.loads(result.stdout)
+    try:
+        result = subprocess.run(
+            ['github-linguist', '--json'], stdout=subprocess.PIPE, check=True)
+        return json.loads(result.stdout)
+    except subprocess.CalledProcessError as e:
+        print(f"Error occurred while running github-linguist: {e}")
+        return {}
 
 
 def generate_language_section(language_stats):
+    if not language_stats:
+        with open('languages.txt', 'w') as f:
+            f.write("No language statistics available.")
+        return
+
     total_bytes = sum(language_stats.values())
     language_section = ""
     for language, bytes_ in language_stats.items():
