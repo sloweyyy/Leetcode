@@ -11,6 +11,9 @@ def get_language_stats():
     except subprocess.CalledProcessError as e:
         print(f"Error occurred while running github-linguist: {e}")
         return {}
+    except FileNotFoundError:
+        print("The github-linguist command is not found. Make sure it is installed and accessible.")
+        return {}
 
 
 def generate_language_section(language_stats):

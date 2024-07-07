@@ -5,7 +5,7 @@ on:
         branches:
             - main
     schedule:
-        - cron: "0 0 * * *"
+        - cron: "0 0 * * *" # Runs every day at midnight UTC
 
 jobs:
     update-readme:
@@ -15,13 +15,11 @@ jobs:
             - name: Checkout repository
               uses: actions/checkout@v2
 
-            - name: Set up Python
-              uses: actions/setup-python@v2
-              with:
-                  python-version: "3.x"
-
             - name: Install dependencies
               run: |
+                  sudo apt-get update
+                  sudo apt-get install -y ruby ruby-dev
+                  sudo gem install github-linguist
                   pip install pygments
 
             - name: Calculate language stats
