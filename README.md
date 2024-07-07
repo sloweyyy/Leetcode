@@ -1,4 +1,4 @@
-# Leetcode Solutions
+# LeetCode Solutions
 
 **Author:** SloWey  
 **Email:** truonglevinhphuc2006@gmail.com
@@ -9,14 +9,7 @@ This repository showcases my journey of learning Data Structures and Algorithms 
 
 ## Languages
 
-- C++
-- C#
-- Python
-- Java
-- JavaScript
-- TypeScript
-- Dart
-- Go
+$(cat languages.txt)
 
 ## Table of Contents
 
