@@ -22,11 +22,19 @@ def generate_language_section(language_stats):
             f.write("No language statistics available.")
         return
 
-    total_bytes = sum(language_stats.values())
+    total_bytes = 0
+    language_bytes = {}
+
+    for language, data in language_stats.items():
+        bytes_count = data.get('size', 0)
+        language_bytes[language] = bytes_count
+        total_bytes += bytes_count
+
     language_section = ""
-    for language, bytes_ in language_stats.items():
-        percentage = (bytes_ / total_bytes) * 100
+    for language, bytes_ in language_bytes.items():
+        percentage = (bytes_ / total_bytes) * 100 if total_bytes > 0 else 0
         language_section += f"- {language}: {percentage:.2f}%\n"
+
     with open('languages.txt', 'w') as f:
         f.write(language_section)
 
