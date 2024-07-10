@@ -75,6 +75,6 @@
     "unordered_set": "cpp",
     "initializer_list": "cpp",
     "valarray": "cpp"
-},
-"java.debug.settings.onBuildFailureProceed": true
+  },
+  "java.debug.settings.onBuildFailureProceed": true
 }
