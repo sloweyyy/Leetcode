@@ -5,10 +5,13 @@
 
 const int mod = 1e9 + 7;
 
-int power(int a, int b) {
+int power(int a, int b)
+{
     int ans = 1;
-    while (b) {
-        if (b & 1) ans = (ans * a) % mod;
+    while (b)
+    {
+        if (b & 1)
+            ans = (ans * a) % mod;
         a = (a * a) % mod;
         b >>= 1;
     }
@@ -17,13 +20,15 @@ int power(int a, int b) {
 
 int inline inv(int x) { return power(x, mod - 2); }
 
-void solve() {
+void solve()
+{
     int N, K;
     std::cin >> N >> K;
 
     std::vector<int> values(N);
     int avg_special_value = 0, avg_normal_value = 0;
-    for (int i = 0; i < N; i++) {
+    for (int i = 0; i < N; i++)
+    {
         std::cin >> values[i];
         if (i < K)
             avg_special_value += values[i];
@@ -53,13 +58,15 @@ void solve() {
     std::cout << expected_alice_score << " " << expected_bob_score << "\n";
 }
 
-signed main() {
+signed main()
+{
     std::ios::sync_with_stdio(false);
     std::cin.tie(0);
-    
+
     int t;
     std::cin >> t;
-    while (t--) {
+    while (t--)
+    {
         solve();
     }
 
