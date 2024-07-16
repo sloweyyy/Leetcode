@@ -1,42 +1,38 @@
-function buildTree(currentNodeValue, childNodesMap) {
-    let newNode = new TreeNode(currentNodeValue);
-    if (childNodesMap.has(currentNodeValue)) {
-        let [leftChild, rightChild] = childNodesMap.get(currentNodeValue);
-        if (leftChild !== -1) {
-            newNode.left = buildTree(leftChild, childNodesMap);
-        }
-        if (rightChild !== -1) {
-            newNode.right = buildTree(rightChild, childNodesMap);
-        }
+class TreeNode {
+    constructor(val, left = null, right = null) {
+        this.val = val;
+        this.left = left;
+        this.right = right;
     }
-    return newNode;
 }
 
 var createBinaryTree = function (descriptions) {
-    let childNodesSet = new Set();
-    let parentChildMap = new Map();
+    const nodes = new Map();
+    const children = new Set();
 
     descriptions.forEach(([parent, child, isLeft]) => {
-        if (!parentChildMap.has(parent)) {
-            parentChildMap.set(parent, [-1, -1]);
+        if (!nodes.has(parent)) {
+            nodes.set(parent, new TreeNode(parent));
         }
+        if (!nodes.has(child)) {
+            nodes.set(child, new TreeNode(child));
+        }
+        children.add(child);
 
-        childNodesSet.add(child);
-
-        if (isLeft === 1) {
-            parentChildMap.get(parent)[0] = child;
+        if (isLeft) {
+            nodes.get(parent).left = nodes.get(child);
         } else {
-            parentChildMap.get(parent)[1] = child;
+            nodes.get(parent).right = nodes.get(child);
         }
     });
 
-    let rootNodeValue;
-    for (let parent of parentChildMap.keys()) {
-        if (!childNodesSet.has(parent)) {
-            rootNodeValue = parent;
+    let root;
+    for (const [node] of nodes) {
+        if (!children.has(node)) {
+            root = nodes.get(node);
             break;
         }
     }
 
-    return buildTree(rootNodeValue, parentChildMap);
+    return root;
 };
