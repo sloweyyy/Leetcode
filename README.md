@@ -10,12 +10,12 @@ This repository showcases my journey of learning Data Structures and Algorithms 
 
 ## Languages
 
-- C++: 24.87%
-- C#: 22.88%
-- Java: 20.19%
-- JavaScript: 18.27%
-- TypeScript: 6.41%
-- Python: 5.47%
+- C++: 24.80%
+- C#: 22.81%
+- Java: 20.13%
+- JavaScript: 18.52%
+- TypeScript: 6.39%
+- Python: 5.46%
 - Dart: 0.32%
 - Go: 1.39%
 - PHP: 0.19%
