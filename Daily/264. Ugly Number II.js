@@ -15,13 +15,19 @@ var nthUglyNumber = function (n) {
         dp[i] = Math.min(next2, Math.min(next3, next5));
         if (dp[i] === next2) {
             i2++;
+            console.log("i2 " + i2);
         }
         if (dp[i] === next3) {
             i3++;
+            console.log("i3 " + i3);
         }
         if (dp[i] === next5) {
             i5++;
+            console.log("i5 " + i5);
         }
+        console.log(dp);
     }
     return dp[n - 1];
 };
+
+console.log(nthUglyNumber(30)); // 12
