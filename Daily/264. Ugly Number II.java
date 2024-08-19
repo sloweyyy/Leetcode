@@ -8,14 +8,22 @@ class Solution {
             dp[i] = Math.min(next2, Math.min(next3, next5));
             if (dp[i] == next2) {
                 i2++;
+                System.out.println(i2);
             }
             if (dp[i] == next3) {
                 i3++;
+                System.out.println(i3);
             }
             if (dp[i] == next5) {
                 i5++;
+                System.out.println(i5);
             }
         }
         return dp[n - 1];
+    }
+
+    public static void main(String[] args) {
+        Solution sol = new Solution();
+        System.out.println(sol.nthUglyNumber(10));
     }
 }
