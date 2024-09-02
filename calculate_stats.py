@@ -29,8 +29,11 @@ def generate_language_section(language_stats):
             language_bytes[language] = bytes_count
             total_bytes += bytes_count
 
+    sorted_languages = sorted(language_bytes.items(),
+                              key=lambda item: item[1], reverse=True)
+
     language_section = ""
-    for language, bytes_ in language_bytes.items():
+    for language, bytes_ in sorted_languages:
         percentage = (bytes_ / total_bytes) * 100 if total_bytes > 0 else 0
         language_section += f"- {language}: {percentage:.2f}%\n"
 
@@ -41,7 +44,7 @@ def update_readme(language_section):
     readme_content = f"""
 # LeetCode Solutions
 
-**Author:** SloWey  
+**Author:** SloWey
 **Email:** truonglevinhphuc2006@gmail.com
 
 ## About
@@ -72,7 +75,7 @@ To run the solutions, ensure you have the respective compilers or interpreters i
 
 ## Usage
 
-Each solution file contains code to solve a specific LeetCode problem. You can use these solutions as a reference to understand various algorithms and coding techniques. 
+Each solution file contains code to solve a specific LeetCode problem. You can use these solutions as a reference to understand various algorithms and coding techniques.
 
 Feel free to clone or download this repository and explore the solutions in your preferred programming language.
 
