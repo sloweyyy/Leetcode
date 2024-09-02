@@ -1,7 +1,7 @@
 
 # LeetCode Solutions
 
-**Author:** SloWey  
+**Author:** SloWey
 **Email:** truonglevinhphuc2006@gmail.com
 
 ## About
@@ -10,14 +10,14 @@ This repository showcases my journey of learning Data Structures and Algorithms 
 
 ## Languages
 
-- C++: 22.00%
-- C#: 20.40%
-- Java: 19.74%
-- JavaScript: 24.52%
+- JavaScript: 24.51%
+- C++: 21.99%
+- C#: 20.39%
+- Java: 19.73%
+- Python: 6.02%
 - TypeScript: 5.67%
-- Python: 5.98%
-- Dart: 0.29%
 - Go: 1.23%
+- Dart: 0.28%
 - Hack: 0.17%
 
 
@@ -41,7 +41,7 @@ To run the solutions, ensure you have the respective compilers or interpreters i
 
 ## Usage
 
-Each solution file contains code to solve a specific LeetCode problem. You can use these solutions as a reference to understand various algorithms and coding techniques. 
+Each solution file contains code to solve a specific LeetCode problem. You can use these solutions as a reference to understand various algorithms and coding techniques.
 
 Feel free to clone or download this repository and explore the solutions in your preferred programming language.
 
