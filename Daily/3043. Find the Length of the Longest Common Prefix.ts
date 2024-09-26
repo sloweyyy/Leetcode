@@ -4,7 +4,7 @@ function longestCommonPrefix(arr1: number[], arr2: number[]): number {
 
     function generatePrefixes(num: number): string[] {
         const str = num.toString();
-        const prefixes = [];
+        const prefixes: string[] = [];
         for (let i = 1; i <= str.length; i++) {
             prefixes.push(str.substring(0, i));
         }
