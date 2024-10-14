@@ -5,7 +5,7 @@ on:
         branches:
             - main
     schedule:
-        - cron: "0 0 * * *" # Runs every day at midnight UTC
+        - cron: "0 0 * * *" 
 
 jobs:
     update-readme:
@@ -15,15 +15,22 @@ jobs:
             - name: Checkout repository
               uses: actions/checkout@v2
 
-            - name: Install dependencies
+            - name: Install Ruby dependencies
               run: |
                   sudo apt-get update
                   sudo apt-get install -y ruby ruby-dev
                   sudo gem install github-linguist
+
+            - name: Install Python dependencies in a virtual environment
+              run: |
+                  python3 -m venv venv
+                  source venv/bin/activate
+                  pip install --upgrade pip
                   pip install pygments
 
             - name: Calculate language stats and update README
               run: |
+                  source venv/bin/activate
                   python calculate_stats.py
 
             - name: Commit changes
