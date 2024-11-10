@@ -1,23 +1,28 @@
 function minimumSubarrayLength(nums: number[], k: number): number {
     const n = nums.length;
-    const prefixSum = new Array(n + 1).fill(0);
+    let minLen = Infinity;
+    let orResults = new Map<number, number>(); // Map of OR value to subarray length
+
     for (let i = 0; i < n; i++) {
-        prefixSum[i + 1] = prefixSum[i] + nums[i];
-    }
+        const newOrResults = new Map<number, number>();
+        newOrResults.set(nums[i], 1);
 
-    let minLen = n + 1;
-    const deque = [];
-    for (let i = 0; i <= n; i++) {
-        while (deque.length && prefixSum[i] - prefixSum[deque[0]] >= k) {
-            minLen = Math.min(minLen, i - deque.shift());
+        for (const [val, len] of orResults) {
+            const newVal = val | nums[i];
+            const newLen = len + 1;
+            if (!newOrResults.has(newVal) || newOrResults.get(newVal)! > newLen) {
+                newOrResults.set(newVal, newLen);
+            }
         }
 
-        while (deque.length && prefixSum[i] <= prefixSum[deque[deque.length - 1]]) {
-            deque.pop();
-        }
+        orResults = newOrResults;
 
-        deque.push(i);
+        for (const [val, len] of orResults) {
+            if (val >= k) {
+                minLen = Math.min(minLen, len);
+            }
+        }
     }
 
-    return minLen === n + 1 ? -1 : minLen;
-};
+    return minLen === Infinity ? -1 : minLen;
+}
