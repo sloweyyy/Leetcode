@@ -1,4 +1,3 @@
-
 function maximumSubarraySum(nums: number[], k: number): number {
   let currentSum = 0;
   let maxSum = 0;
