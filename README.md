@@ -1,3 +1,4 @@
+
 # LeetCode Solutions
 
 **Author:** SloWey
@@ -9,28 +10,29 @@ This repository showcases my journey of learning Data Structures and Algorithms 
 
 ## Languages
 
-- JavaScript: 25.21%
-- C++: 18.27%
-- C#: 16.94%
-- Java: 16.70%
-- TypeScript: 15.21%
-- Python: 5.77%
-- Go: 1.02%
-- Jupyter Notebook: 0.51%
-- Dart: 0.24%
+- JavaScript: 25.43%
+- C++: 18.04%
+- C#: 16.73%
+- Java: 16.49%
+- TypeScript: 15.73%
+- Python: 5.69%
+- Go: 1.01%
+- Jupyter Notebook: 0.50%
+- Dart: 0.23%
 - Hack: 0.14%
+
 
 ## Table of Contents
 
 - [Leetcode Solutions](#leetcode-solutions)
-    - [About](#about)
-    - [Languages](#languages)
-    - [Getting Started](#getting-started)
-        - [Prerequisites](#prerequisites)
-    - [Usage](#usage)
-    - [Contributing](#contributing)
-    - [License](#license)
-    - [Contact](#contact)
+  - [About](#about)
+  - [Languages](#languages)
+  - [Getting Started](#getting-started)
+    - [Prerequisites](#prerequisites)
+  - [Usage](#usage)
+  - [Contributing](#contributing)
+  - [License](#license)
+  - [Contact](#contact)
 
 ## Getting Started
 
