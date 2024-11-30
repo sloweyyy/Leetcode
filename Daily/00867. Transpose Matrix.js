@@ -2,7 +2,7 @@
  * @param {number[][]} matrix
  * @return {number[][]}
  */
-var transpose = function(matrix) {
+var transpose = function (matrix) {
     let result = [];
     let row = matrix.length;
     let col = matrix[0].length;

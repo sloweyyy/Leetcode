@@ -1,4 +1,3 @@
-
 # LeetCode Solutions
 
 **Author:** SloWey
@@ -21,18 +20,17 @@ This repository showcases my journey of learning Data Structures and Algorithms 
 - Dart: 0.24%
 - Hack: 0.14%
 
-
 ## Table of Contents
 
 - [Leetcode Solutions](#leetcode-solutions)
-  - [About](#about)
-  - [Languages](#languages)
-  - [Getting Started](#getting-started)
-    - [Prerequisites](#prerequisites)
-  - [Usage](#usage)
-  - [Contributing](#contributing)
-  - [License](#license)
-  - [Contact](#contact)
+    - [About](#about)
+    - [Languages](#languages)
+    - [Getting Started](#getting-started)
+        - [Prerequisites](#prerequisites)
+    - [Usage](#usage)
+    - [Contributing](#contributing)
+    - [License](#license)
+    - [Contact](#contact)
 
 ## Getting Started
 

@@ -10,7 +10,7 @@
  * @param {TreeNode} root
  * @return {string}
  */
-var tree2str = function(root) {
+var tree2str = function (root) {
     if (!root) {
         return "";
     }

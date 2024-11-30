@@ -10,7 +10,6 @@ function FoodData(name, cuisine, rating) {
 }
 
 class FoodRatings {
-
     constructor(foods, cuisines, ratings) {
         //Map<string, FoodData>
         this.foodNameToFoodData = new Map();
@@ -20,10 +19,19 @@ class FoodRatings {
             let currentFood = new FoodData(foods[i], cuisines[i], ratings[i]);
             this.foodNameToFoodData.set(foods[i], currentFood);
             if (!this.cuisineNameToHeapifiedFoodData.has(cuisines[i])) {
-                this.cuisineNameToHeapifiedFoodData.set(cuisines[i],
-                    new MaxPriorityQueue({ compare: (x, y) => (x.rating === y.rating) ? x.name.localeCompare(y.name) : (y.rating - x.rating) }));
+                this.cuisineNameToHeapifiedFoodData.set(
+                    cuisines[i],
+                    new MaxPriorityQueue({
+                        compare: (x, y) =>
+                            x.rating === y.rating
+                                ? x.name.localeCompare(y.name)
+                                : y.rating - x.rating,
+                    }),
+                );
             }
-            this.cuisineNameToHeapifiedFoodData.get(cuisines[i]).enqueue(currentFood);
+            this.cuisineNameToHeapifiedFoodData
+                .get(cuisines[i])
+                .enqueue(currentFood);
         }
     }
 
@@ -31,7 +39,9 @@ class FoodRatings {
         let toUpdate = this.foodNameToFoodData.get(food);
         let updated = new FoodData(toUpdate.name, toUpdate.cuisine, newRating);
         this.foodNameToFoodData.set(food, updated);
-        this.cuisineNameToHeapifiedFoodData.get(toUpdate.cuisine).enqueue(updated);
+        this.cuisineNameToHeapifiedFoodData
+            .get(toUpdate.cuisine)
+            .enqueue(updated);
     }
 
     highestRated(cuisine) {

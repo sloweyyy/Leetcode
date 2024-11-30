@@ -12,8 +12,8 @@ function shortestPalindrome(s: string): string {
     }
 
     const suffix = s.slice(i);
-    const prefix = suffix.split('').reverse().join('');
+    const prefix = suffix.split("").reverse().join("");
     const mid = shortestPalindrome(s.slice(0, i));
 
     return prefix + mid + suffix;
-};
+}

@@ -2,7 +2,7 @@
  * @param {number[][]} mat
  * @return {number}
  */
-var numSpecial = function(mat) {
+var numSpecial = function (mat) {
     let count = 0;
     for (let i = 0; i < mat.length; i++) {
         for (let j = 0; j < mat[0].length; j++) {

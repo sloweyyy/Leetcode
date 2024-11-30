@@ -3,8 +3,8 @@
  * @param {number} k
  * @return {string}
  */
-var getHappyString = function(n, k) {
-    const chars = ['a', 'b', 'c'];
+var getHappyString = function (n, k) {
+    const chars = ["a", "b", "c"];
     const happyStrings = [];
     const generateHappyStrings = (str) => {
         if (str.length === n) {
@@ -17,6 +17,6 @@ var getHappyString = function(n, k) {
             }
         }
     };
-    generateHappyStrings('');
-    return happyStrings[k - 1] || '';
+    generateHappyStrings("");
+    return happyStrings[k - 1] || "";
 };

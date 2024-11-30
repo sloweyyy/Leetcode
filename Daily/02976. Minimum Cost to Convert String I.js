@@ -32,7 +32,7 @@ var minimumCost = function (source, target, original, changed, cost) {
                 if (costMatrix[i][k] < INF && costMatrix[k][j] < INF) {
                     costMatrix[i][j] = Math.min(
                         costMatrix[i][j],
-                        costMatrix[i][k] + costMatrix[k][j]
+                        costMatrix[i][k] + costMatrix[k][j],
                     );
                 }
             }

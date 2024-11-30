@@ -2,8 +2,7 @@
  * @param {number[]} height
  * @return {number}
  */
-var trap = function(height) {
-
+var trap = function (height) {
     let result = 0;
 
     let left = 0;
@@ -13,9 +12,7 @@ var trap = function(height) {
     let rightMax = 0;
 
     while (left < right) {
-
         if (height[left] < height[right]) {
-
             if (height[left] >= leftMax) {
                 leftMax = height[left];
             } else {
@@ -23,9 +20,7 @@ var trap = function(height) {
             }
 
             left++;
-
         } else {
-
             if (height[right] >= rightMax) {
                 rightMax = height[right];
             } else {
@@ -33,9 +28,7 @@ var trap = function(height) {
             }
 
             right--;
-
         }
-
     }
 
     return result;

@@ -2,7 +2,7 @@
  * @param {string} s
  * @return {number}
  */
-var firstUniqChar = function(s) {
+var firstUniqChar = function (s) {
     const freq = {};
     for (const c of s) {
         freq[c] = (freq[c] || 0) + 1;

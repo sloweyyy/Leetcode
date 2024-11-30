@@ -4,8 +4,10 @@
  * @param {number} target
  * @return {number}
  */
-var numRollsToTarget = function(n, k, target) {
-    const dp = new Array(n + 1).fill(0).map(() => new Array(target + 1).fill(0));
+var numRollsToTarget = function (n, k, target) {
+    const dp = new Array(n + 1)
+        .fill(0)
+        .map(() => new Array(target + 1).fill(0));
     const mod = 1e9 + 7;
     dp[0][0] = 1;
     for (let i = 1; i <= n; i++) {

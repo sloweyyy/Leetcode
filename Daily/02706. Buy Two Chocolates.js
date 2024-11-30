@@ -3,7 +3,7 @@
  * @param {number} money
  * @return {number}
  */
-var buyChoco = function(prices, money) {
+var buyChoco = function (prices, money) {
     let min1 = Infinity;
     let min2 = Infinity;
 

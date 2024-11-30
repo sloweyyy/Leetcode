@@ -2,7 +2,7 @@
  * @param {string[]} words
  * @return {boolean}
  */
-var makeEqual = function(words) {
+var makeEqual = function (words) {
     let map = new Map();
     for (let word of words) {
         for (let c of word) {

@@ -13,20 +13,20 @@
  */
 
 function kthLargestLevelSum(root: TreeNode | null, k: number): number {
-  if (!root) return -1;
+    if (!root) return -1;
 
-  const levelSum: number[] = [];
-  
-  const dfs = (node: TreeNode | null, level: number) => {
-    if (node === null) return;
-    if (levelSum[level] === undefined) levelSum[level] = 0;
-    levelSum[level] += node.val;
-    dfs(node.left, level + 1);
-    dfs(node.right, level + 1);
-  };
-  
-  dfs(root, 0);
-  levelSum.sort((a, b) => b - a);
-  
-  return k <= levelSum.length ? levelSum[k - 1] : -1;  
+    const levelSum: number[] = [];
+
+    const dfs = (node: TreeNode | null, level: number) => {
+        if (node === null) return;
+        if (levelSum[level] === undefined) levelSum[level] = 0;
+        levelSum[level] += node.val;
+        dfs(node.left, level + 1);
+        dfs(node.right, level + 1);
+    };
+
+    dfs(root, 0);
+    levelSum.sort((a, b) => b - a);
+
+    return k <= levelSum.length ? levelSum[k - 1] : -1;
 }

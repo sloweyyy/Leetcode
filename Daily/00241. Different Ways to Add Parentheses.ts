@@ -4,15 +4,15 @@ function diffWaysToCompute(expression: string): number[] {
     for (let i = 0; i < expression.length; i++) {
         const char = expression[i];
 
-        if (char === '+' || char === '-' || char === '*') {
+        if (char === "+" || char === "-" || char === "*") {
             const left = diffWaysToCompute(expression.slice(0, i));
             const right = diffWaysToCompute(expression.slice(i + 1));
 
             for (const l of left) {
                 for (const r of right) {
-                    if (char === '+') {
+                    if (char === "+") {
                         result.push(l + r);
-                    } else if (char === '-') {
+                    } else if (char === "-") {
                         result.push(l - r);
                     } else {
                         result.push(l * r);
@@ -27,4 +27,4 @@ function diffWaysToCompute(expression: string): number[] {
     }
 
     return result;
-};
+}

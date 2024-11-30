@@ -2,7 +2,7 @@
  * @param {number[][]} img
  * @return {number[][]}
  */
-var imageSmoother = function(img) {
+var imageSmoother = function (img) {
     let result = [];
     for (let i = 0; i < img.length; ++i) {
         result.push([]);
@@ -11,7 +11,12 @@ var imageSmoother = function(img) {
             let count = 0;
             for (let k = -1; k <= 1; ++k) {
                 for (let l = -1; l <= 1; ++l) {
-                    if (i + k >= 0 && i + k < img.length && j + l >= 0 && j + l < img[0].length) {
+                    if (
+                        i + k >= 0 &&
+                        i + k < img.length &&
+                        j + l >= 0 &&
+                        j + l < img[0].length
+                    ) {
                         sum += img[i + k][j + l];
                         ++count;
                     }

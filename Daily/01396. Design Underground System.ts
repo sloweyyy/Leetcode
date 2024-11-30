@@ -1,19 +1,11 @@
 class UndergroundSystem {
-    constructor() {
-        
-    }
+    constructor() {}
 
-    checkIn(id: number, stationName: string, t: number): void {
+    checkIn(id: number, stationName: string, t: number): void {}
 
-    }
+    checkOut(id: number, stationName: string, t: number): void {}
 
-    checkOut(id: number, stationName: string, t: number): void {
-
-    }
-
-    getAverageTime(startStation: string, endStation: string): number {
-
-    }
+    getAverageTime(startStation: string, endStation: string): number {}
 }
 
 /**

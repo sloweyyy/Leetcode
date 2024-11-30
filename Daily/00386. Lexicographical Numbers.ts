@@ -4,7 +4,7 @@ function lexicalOrder(n: number): number[] {
         dfs(i, n, res);
     }
     return res;
-};
+}
 
 function dfs(curr: number, n: number, res: number[]): void {
     if (curr > n) {

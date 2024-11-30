@@ -2,7 +2,7 @@
  * @param {number} n
  * @return {number}
  */
-var totalMoney = function(n) {
+var totalMoney = function (n) {
     let total = 0;
     let week = 0;
     let day = 0;

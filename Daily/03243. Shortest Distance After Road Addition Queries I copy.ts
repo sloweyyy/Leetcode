@@ -1,4 +1,7 @@
-function shortestDistanceAfterQueries(n: number, queries: number[][]): number[] {
+function shortestDistanceAfterQueries(
+    n: number,
+    queries: number[][],
+): number[] {
     const graph = Array.from({ length: n }, () => new Array(n).fill(Infinity));
     for (let i = 0; i < n - 1; i++) {
         graph[i][i + 1] = 1;
@@ -6,7 +9,9 @@ function shortestDistanceAfterQueries(n: number, queries: number[][]): number[] 
 
     const answer: number[] = [];
 
-    const distances = Array.from({ length: n }, () => new Array(n).fill(Infinity));
+    const distances = Array.from({ length: n }, () =>
+        new Array(n).fill(Infinity),
+    );
     for (let i = 0; i < n; i++) {
         distances[i][i] = 0;
     }
@@ -28,8 +33,12 @@ function shortestDistanceAfterQueries(n: number, queries: number[][]): number[] 
             distances[u][v] = 1;
             for (let i = 0; i < n; i++) {
                 for (let j = 0; j < n; j++) {
-                    if (distances[i][u] + distances[u][v] + distances[v][j] < distances[i][j]) {
-                        distances[i][j] = distances[i][u] + distances[u][v] + distances[v][j];
+                    if (
+                        distances[i][u] + distances[u][v] + distances[v][j] <
+                        distances[i][j]
+                    ) {
+                        distances[i][j] =
+                            distances[i][u] + distances[u][v] + distances[v][j];
                     }
                 }
             }

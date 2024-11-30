@@ -11,12 +11,16 @@
  */
 
 function spiralMatrix(m: number, n: number, head: ListNode | null): number[][] {
-    const res: number[][] = Array.from({ length: m }, () => Array.from({ length: n }, () => -1));
+    const res: number[][] = Array.from({ length: m }, () =>
+        Array.from({ length: n }, () => -1),
+    );
     let node = head;
 
     // Define boundaries for spiral traversal
-    let top = 0, bottom = m - 1;
-    let left = 0, right = n - 1;
+    let top = 0,
+        bottom = m - 1;
+    let left = 0,
+        right = n - 1;
 
     // Continue placing values in spiral order
     while (node && top <= bottom && left <= right) {

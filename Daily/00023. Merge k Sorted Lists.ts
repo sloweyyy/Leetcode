@@ -32,7 +32,7 @@ function mergeKLists(lists: Array<ListNode | null>): ListNode | null {
         heapify(heap, 0);
     }
     return result.next;
-};
+}
 
 function buildHeap(heap: ListNode[]) {
     for (let i = Math.floor(heap.length / 2); i >= 0; i--) {

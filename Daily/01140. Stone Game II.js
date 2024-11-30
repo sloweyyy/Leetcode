@@ -23,7 +23,7 @@ var stoneGameII = function (piles) {
         for (let x = 1; x <= 2 * m; x++) {
             maxStones = Math.max(
                 maxStones,
-                suffixSum[i] - dp(i + x, Math.max(m, x))
+                suffixSum[i] - dp(i + x, Math.max(m, x)),
             );
         }
 

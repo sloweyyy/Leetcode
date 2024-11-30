@@ -14,7 +14,7 @@ function nextPermutation(nums: number[]): void {
         [nums[i], nums[j]] = [nums[j], nums[i]];
     }
     reverse(nums, i + 1);
-};
+}
 
 function reverse(nums: number[], start: number) {
     let i = start;

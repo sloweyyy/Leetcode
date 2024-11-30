@@ -6,12 +6,12 @@ function generateParenthesis(n: number): string[] {
             return;
         }
         if (left > 0) {
-            dfs(str + '(', left - 1, right);
+            dfs(str + "(", left - 1, right);
         }
         if (right > left) {
-            dfs(str + ')', left, right - 1);
+            dfs(str + ")", left, right - 1);
         }
     };
-    dfs('', n, n);
+    dfs("", n, n);
     return result;
-};
+}

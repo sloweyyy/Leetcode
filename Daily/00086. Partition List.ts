@@ -30,4 +30,4 @@ function partition(head: ListNode | null, x: number): ListNode | null {
     cur2.next = null;
     cur1.next = dummy2.next;
     return dummy1.next;
-};
+}

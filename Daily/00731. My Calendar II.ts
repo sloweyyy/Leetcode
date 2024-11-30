@@ -16,7 +16,10 @@ class MyCalendarTwo {
 
         for (const [s, e] of this.bookings) {
             if (start < e && end > s) {
-                this.doubleBookings.push([Math.max(start, s), Math.min(end, e)]);
+                this.doubleBookings.push([
+                    Math.max(start, s),
+                    Math.min(end, e),
+                ]);
             }
         }
 

@@ -23,4 +23,4 @@ function swapPairs(head: ListNode | null): ListNode | null {
     }
     current.next = head;
     return result.next;
-};
+}

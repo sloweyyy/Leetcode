@@ -1,4 +1,8 @@
-function calcEquation(equations: string[][], values: number[], queries: string[][]): number[] {
+function calcEquation(
+    equations: string[][],
+    values: number[],
+    queries: string[][],
+): number[] {
     const graph: Map<string, Map<string, number>> = new Map();
     for (let i = 0; i < equations.length; i++) {
         const [a, b] = equations[i];
@@ -21,9 +25,14 @@ function calcEquation(equations: string[][], values: number[], queries: string[]
         res.push(dfs1(graph, a, b, visited));
     }
     return res;
-};
+}
 
-function dfs1(graph: Map<string, Map<string, number>>, cur: string, target: string, visited: Set<string>): number {
+function dfs1(
+    graph: Map<string, Map<string, number>>,
+    cur: string,
+    target: string,
+    visited: Set<string>,
+): number {
     if (cur === target) return 1;
     visited.add(cur);
     const neighbors = graph.get(cur);
@@ -35,4 +44,3 @@ function dfs1(graph: Map<string, Map<string, number>>, cur: string, target: stri
     }
     return -1;
 }
-

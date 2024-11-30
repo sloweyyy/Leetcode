@@ -7,4 +7,4 @@ function mySqrt(x: number): number {
         else r = m;
     }
     return l * l === x ? l : l - 1;
-};
+}

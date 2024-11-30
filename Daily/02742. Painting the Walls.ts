@@ -9,4 +9,4 @@ function paintWalls(cost: number[], time: number[]): number {
         }
     }
     return dp[n];
-};
+}

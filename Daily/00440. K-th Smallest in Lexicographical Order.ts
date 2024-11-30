@@ -12,7 +12,7 @@ function findKthNumber(n: number, k: number): number {
         }
     }
     return cur;
-};
+}
 
 function calcSteps(n: number, n1: number, n2: number): number {
     let steps = 0;

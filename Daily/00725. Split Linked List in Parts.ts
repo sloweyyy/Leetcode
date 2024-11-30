@@ -10,7 +10,10 @@
  * }
  */
 
-function splitListToParts(head: ListNode | null, k: number): Array<ListNode | null> {
+function splitListToParts(
+    head: ListNode | null,
+    k: number,
+): Array<ListNode | null> {
     let length = 0;
     let current = head;
     while (current) {
@@ -36,4 +39,4 @@ function splitListToParts(head: ListNode | null, k: number): Array<ListNode | nu
     }
 
     return result;
-};
+}

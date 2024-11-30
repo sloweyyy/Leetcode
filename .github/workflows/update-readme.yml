@@ -4,7 +4,7 @@ on:
     push:
         branches:
             - main
-            
+
 jobs:
     update-readme:
         runs-on: ubuntu-latest

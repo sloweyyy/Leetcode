@@ -2,7 +2,7 @@
  * @param {number[]} nums
  * @return {number[]}
  */
-var getSumAbsoluteDifferences = function(nums) {
+var getSumAbsoluteDifferences = function (nums) {
     let n = nums.length;
     let sum = 0;
     let res = [];

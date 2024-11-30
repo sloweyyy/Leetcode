@@ -8,4 +8,4 @@ function summaryRanges(nums: number[]): string[] {
         start = i + 1;
     }
     return res;
-};
+}

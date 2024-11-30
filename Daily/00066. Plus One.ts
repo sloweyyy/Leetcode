@@ -1,6 +1,8 @@
 function plusOne(digits: number[]): number[] {
     const n = digits.length;
-    const dp: number[][] = Array.from({ length: n }, () => Array.from({ length: 2 }, () => 0));
+    const dp: number[][] = Array.from({ length: n }, () =>
+        Array.from({ length: 2 }, () => 0),
+    );
     dp[0][0] = 1;
     dp[0][1] = digits[0];
     for (let i = 1; i < n; i++) {
@@ -16,4 +18,4 @@ function plusOne(digits: number[]): number[] {
         }
     }
     return dp.map((d) => d[1]);
-};
+}

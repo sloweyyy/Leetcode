@@ -10,8 +10,7 @@
  * @param {TreeNode} root
  * @return {number[]}
  */
-var inorderTraversal = function(root) {
-
+var inorderTraversal = function (root) {
     let result = [];
     let stack = [];
     let current = root;

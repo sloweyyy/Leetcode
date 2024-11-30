@@ -36,8 +36,8 @@ function replaceValueInTree(root: TreeNode | null): TreeNode | null {
         node.val = val;
 
         let cousinSum = depth + 1 < depthSum.length ? depthSum[depth + 1] : 0;
-        cousinSum -= (node.left?.val ?? 0);
-        cousinSum -= (node.right?.val ?? 0);
+        cousinSum -= node.left?.val ?? 0;
+        cousinSum -= node.right?.val ?? 0;
 
         if (node.left) dfs2(node.left, cousinSum, depth + 1);
         if (node.right) dfs2(node.right, cousinSum, depth + 1);

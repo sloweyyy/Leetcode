@@ -7,5 +7,5 @@ function getMaximumXor(nums: number[], maximumBit: number): number[] {
         xor ^= nums[i];
         res[n - i - 1] = max ^ xor;
     }
-    return res;  
-};
+    return res;
+}

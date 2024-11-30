@@ -1,0 +1,15 @@
+{
+    "name": "leetcode",
+    "version": "1.0.0",
+    "description": "**Author:** SloWey **Email:** truonglevinhphuc2006@gmail.com",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "prettier": "prettier --write ."
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "prettier": "^3.4.1"
+    }
+}

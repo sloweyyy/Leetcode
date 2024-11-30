@@ -10,7 +10,10 @@ function minimumSubarrayLength(nums: number[], k: number): number {
         for (const [val, len] of orResults) {
             const newVal = val | nums[i];
             const newLen = len + 1;
-            if (!newOrResults.has(newVal) || newOrResults.get(newVal)! > newLen) {
+            if (
+                !newOrResults.has(newVal) ||
+                newOrResults.get(newVal)! > newLen
+            ) {
                 newOrResults.set(newVal, newLen);
             }
         }

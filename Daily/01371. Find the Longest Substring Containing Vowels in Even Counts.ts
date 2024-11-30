@@ -1,5 +1,5 @@
 function findTheLongestSubstring(s: string): number {
-    const vowels = 'aeiou';
+    const vowels = "aeiou";
     const vowelIndices = new Map<string, number>();
     for (let i = 0; i < vowels.length; i++) {
         vowelIndices.set(vowels[i], i);
@@ -24,4 +24,4 @@ function findTheLongestSubstring(s: string): number {
     }
 
     return longest;
-};
+}

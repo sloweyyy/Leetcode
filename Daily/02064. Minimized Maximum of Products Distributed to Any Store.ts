@@ -6,10 +6,10 @@ function minimizedMaximum(n: number, quantities: number[]): number {
         }
         return stores <= n;
     }
-    
+
     let left = 1;
     let right = Math.max(...quantities);
-    
+
     while (left < right) {
         let mid = Math.floor((left + right) / 2);
         if (canDistribute(mid)) {
@@ -18,7 +18,6 @@ function minimizedMaximum(n: number, quantities: number[]): number {
             left = mid + 1;
         }
     }
-    
-    return left;
-};
 
+    return left;
+}

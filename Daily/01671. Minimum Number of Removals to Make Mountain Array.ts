@@ -6,7 +6,8 @@ function minimumMountainRemovals(nums: number[]): number {
     const dp1: number[] = [];
     for (let i = 0; i < n; i++) {
         const num = nums[i];
-        let left = 0, right = dp1.length;
+        let left = 0,
+            right = dp1.length;
         while (left < right) {
             const mid = (left + right) >> 1;
             if (dp1[mid] < num) left = mid + 1;
@@ -19,7 +20,8 @@ function minimumMountainRemovals(nums: number[]): number {
     const dp2: number[] = [];
     for (let i = n - 1; i >= 0; i--) {
         const num = nums[i];
-        let left = 0, right = dp2.length;
+        let left = 0,
+            right = dp2.length;
         while (left < right) {
             const mid = (left + right) >> 1;
             if (dp2[mid] < num) left = mid + 1;

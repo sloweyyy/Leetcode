@@ -2,7 +2,7 @@
  * @param {number[][]} nums
  * @return {number[]}
  */
-var smallestRange = function(nums) {
+var smallestRange = function (nums) {
     const events = [];
     for (let i = 0; i < nums.length; i++) {
         for (const num of nums[i]) {
@@ -11,7 +11,12 @@ var smallestRange = function(nums) {
     }
     events.sort((a, b) => a[0] - b[0]);
     const freq = new Array(nums.length).fill(0);
-    let left = 0, right = 0, minRange = Infinity, minLeft = 0, minRight = 0, count = 0;
+    let left = 0,
+        right = 0,
+        minRange = Infinity,
+        minLeft = 0,
+        minRight = 0,
+        count = 0;
     while (right < events.length) {
         if (freq[events[right][1]] === 0) {
             count++;

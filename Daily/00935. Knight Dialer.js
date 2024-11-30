@@ -2,7 +2,7 @@
  * @param {number} n
  * @return {number}
  */
-var knightDialer = function(n) {
+var knightDialer = function (n) {
     const mod = 1000000007;
     const map = {
         0: [4, 6],

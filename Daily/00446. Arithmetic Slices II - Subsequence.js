@@ -2,7 +2,7 @@
  * @param {number[]} nums
  * @return {number}
  */
-var numberOfArithmeticSlices = function(nums) {
+var numberOfArithmeticSlices = function (nums) {
     const dp = [];
     let total = 0;
     for (let i = 0; i < nums.length; i++) {

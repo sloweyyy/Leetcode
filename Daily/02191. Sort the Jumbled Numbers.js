@@ -10,7 +10,7 @@ var sortJumbled = function (mapping, nums) {
                 .toString()
                 .split("")
                 .map((digit) => mapping[digit])
-                .join("")
+                .join(""),
         );
     };
 

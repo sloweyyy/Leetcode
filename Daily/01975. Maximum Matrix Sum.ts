@@ -11,5 +11,5 @@ function maxMatrixSum(matrix: number[][]): number {
             min = Math.min(min, Math.abs(num));
         }
     }
-    return negCount % 2 === 0 ? sum : sum - 2 * min;  
-};
+    return negCount % 2 === 0 ? sum : sum - 2 * min;
+}

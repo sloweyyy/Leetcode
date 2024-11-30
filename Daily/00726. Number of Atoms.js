@@ -34,7 +34,7 @@ const countOfAtoms = (formula) => {
             const [multiplier, newIndex] = readNextDigit(++index);
             index = newIndex;
             Object.keys(currentMap).forEach(
-                (key) => (currentMap[key] *= multiplier)
+                (key) => (currentMap[key] *= multiplier),
             );
             const lastMap = stack.pop() || {};
             Object.keys(currentMap).forEach((key) => {
@@ -55,6 +55,6 @@ const countOfAtoms = (formula) => {
         .reduce(
             (result, [element, count]) =>
                 `${result}${element}${count === 1 ? "" : count}`,
-            ""
+            "",
         );
 };

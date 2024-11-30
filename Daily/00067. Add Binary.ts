@@ -1,5 +1,5 @@
 function addBinary(a: string, b: string): string {
-    let result = '';
+    let result = "";
     let carry = 0;
     let i = a.length - 1;
     let j = b.length - 1;
@@ -17,4 +17,4 @@ function addBinary(a: string, b: string): string {
         carry = Math.floor(sum / 2);
     }
     return result;
-};
+}

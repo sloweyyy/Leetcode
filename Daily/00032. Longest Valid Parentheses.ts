@@ -2,7 +2,7 @@ function longestValidParentheses(s: string): number {
     let result = 0;
     const stack: number[] = [-1];
     for (let i = 0; i < s.length; i++) {
-        if (s[i] === '(') {
+        if (s[i] === "(") {
             stack.push(i);
         } else {
             stack.pop();
@@ -14,4 +14,4 @@ function longestValidParentheses(s: string): number {
         }
     }
     return result;
-};
+}
