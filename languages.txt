@@ -1,9 +1,0 @@
-- C#: 27.31%
-- C++: 22.52%
-- Java: 24.10%
-- JavaScript: 10.90%
-- TypeScript: 7.65%
-- Python: 5.24%
-- Dart: 0.38%
-- Go: 1.66%
-- PHP: 0.23%
