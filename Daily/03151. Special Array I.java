@@ -2,20 +2,16 @@
 class Solution {
 
     public boolean isArraySpecial(int[] nums) {
-        int n = nums.length;
-        int[] count = new int[n + 1];
-        for (int num : nums) {
-            count[Math.min(num, n)]++;
+        if (nums.length == 1) {
+            return true;
         }
 
-        int sum = 0;
-        for (int i = n; i >= 1; i--) {
-            sum += count[i];
-            if (sum == i) {
-                return true;
+        for (int i = 0; i < nums.length - 1; i++) {
+            if ((nums[i] % 2) == (nums[i + 1] % 2)) {
+                return false;
             }
         }
 
-        return false;
+        return true;
     }
 }
