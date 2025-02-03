@@ -42,62 +42,54 @@ def generate_language_section(language_stats):
 
 def update_readme(language_section):
     readme_content = f"""
-# LeetCode Solutions
+# LeetCode & Algorithmic Solutions
 
 **Author:** SloWey
 **Email:** truonglevinhphuc2006@gmail.com
 
-## About
+This repository documents my journey through Data Structures and Algorithms (DSA) by solving LeetCode problems. I'm using this as a way to improve my coding skills and prepare for technical interviews.
 
-This repository showcases my journey of learning Data Structures and Algorithms (DAS) through solving various LeetCode problems in multiple programming languages. LeetCode is a platform for practicing coding and algorithmic challenges, and this repository aims to provide clear and well-documented solutions to help others improve their problem-solving skills and prepare for coding interviews.
+## Languages Used
 
-## Languages
+Here's a breakdown of the languages I've been using, along with their contribution percentage:
 
 {language_section}
 
-## Table of Contents
+## Contents
 
-- [Leetcode Solutions](#leetcode-solutions)
-  - [About](#about)
-  - [Languages](#languages)
-  - [Getting Started](#getting-started)
-    - [Prerequisites](#prerequisites)
-  - [Usage](#usage)
-  - [Contributing](#contributing)
-  - [License](#license)
-  - [Contact](#contact)
+*   **Codeforce Contests:** Solutions from Codeforces competitions.
+*   **Codeforce Problemset:** Solutions from specific problems on Codeforces.
+*   **LeetCode Daily:** My solutions to daily LeetCode challenges.
+*   **Weekly Contest:** Solutions from LeetCode Weekly Contests.
 
 ## Getting Started
 
 ### Prerequisites
 
-To run the solutions, ensure you have the respective compilers or interpreters installed and configured on your system for the programming languages you want to use.
+*   Ensure you have the necessary compilers or interpreters installed for the languages you want to explore.
 
-## Usage
+### Usage
 
-Each solution file contains code to solve a specific LeetCode problem. You can use these solutions as a reference to understand various algorithms and coding techniques.
-
-Feel free to clone or download this repository and explore the solutions in your preferred programming language.
+*   Feel free to browse the code and adapt it to your needs. Each file typically contains the solution to one specific problem.
+*   Use these solutions as references for understanding algorithms and coding techniques.
 
 ## Contributing
 
-Contributions are welcome! If you'd like to contribute a solution in any of the supported languages or suggest improvements, please follow these guidelines:
+I welcome your contributions! If you'd like to contribute a solution or an improvement:
 
-1. Fork the repository.
-2. Create a new branch for your feature or bug fix.
-3. Implement your solution or improvement.
-4. Add documentation and comments to your code.
-5. Test your code to ensure it works correctly.
-6. Create a pull request with a clear description of your changes.
+1.  Fork this repository.
+2.  Create a new branch with a descriptive name for your changes.
+3.  Implement your solution and provide clear comments and documentation.
+4.  Test your code thoroughly.
+5.  Open a pull request detailing your changes.
 
 ## License
 
-This repository is licensed under the [MIT License](LICENSE).
+This project is licensed under the [MIT License](LICENSE).
 
 ## Contact
 
-If you have any questions, suggestions, or feedback, feel free to reach out to me via email at truonglevinhphuc2006@gmail.com.
-"""
+Feel free to reach out via email at truonglevinhphuc2006@gmail.com for any questions, feedback, or suggestions."""
     with open('README.md', 'w') as f:
         f.write(readme_content)
 
